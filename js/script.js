@@ -1,14 +1,3 @@
-// Funktion zum Prüfen, ob die Seite existiert
-function checkPageExists() {
-    const path = window.location.pathname;
-    const validPages = ['/index.html', '/404.html'];
-    const currentPage = path === '/' ? '/index.html' : path;
-
-    if (!validPages.includes(currentPage) && !path.includes('#')) {
-        window.location.replace('/404.html');
-    }
-}
-
 // Beim Laden der Seite prüfen
 document.addEventListener('DOMContentLoaded', () => {
     checkPageExists();
